@@ -13,7 +13,7 @@ class Song
   @@genre_count = {} #{"rap" => 5, "rock" => 1, "country" => 3}
 
   #attr_accessor work only for INSTANCE variables
-  attr_accessor :artist_name, :name, :genre
+  attr_accessor :artist, :name, :genre
   # attr_reader :count, :artist, :genres:, :artist_count, :genres_count
 
   def initialize(name, artist, genre)
@@ -23,7 +23,6 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-
     # unless @@artists.include?(artist)
       @@artists << artist
     # end
@@ -37,8 +36,6 @@ class Song
       # select_array << value
 
     @@genre_count[genre] = @@genres.length
-
-
   end
 
   def self.count
@@ -54,6 +51,18 @@ class Song
   end
 
   def self.genre_count
+    #return all duplicate genre names from @@genre array
+    #@@genres.select { |value| value == artist}
+    #.count will count how many element fit the passed in argument
+    new =[]
+    ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].inject do |base, comparison|
+      if base == comparison
+      new << comparison
+      end
+    end
+    ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].count("Rap")
+    #How to find a good argument for .count? Iteration?
+    @@genre.count(  )
     @@genre_count
   end
 
@@ -61,6 +70,7 @@ class Song
     @@artists_count
   end
 end
+["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"]
 # a1 = Song.new("Both", "Drake", "Rap")
 # a2 = Song.new("Glyachester", "Drake", "Rap")
 # a3 = Song.new("Started From The Bottom", "Drake", "Rap")
