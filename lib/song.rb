@@ -11,7 +11,7 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    
+
     #class variables that are modified on initialize
     @@count += 1
 
@@ -21,13 +21,13 @@ class Song
     #The .length retrieves the length of the given array and sets it equal to the key value of the newly created key.
     #@@artist_count hash recieves key/value pair and is updated on every initialize
     @@artist_count[artist] = @@artists.select { |value| value == artist}.length
-    
 
-    
+
+
     @@genres << genre
     @@genre_count[genre] = @@genres.select { |value|  value == genre}.length
     @@genre_count[genre] = @@genres.length
-    
+
  end #end of initialize
 
   def self.count
@@ -37,7 +37,7 @@ class Song
   def self.artists
     @@artists.uniq
   end
-  
+
     def self.genres
     @@genres.uniq
   end
@@ -45,11 +45,11 @@ class Song
   def self.artist_count
     @@artist_count
   end
-  
+
   def self.genre_count
     @@genre_count
   end
-  
+
 
 end
 #-----------------------------------------------------------------------------------------------------------------------------------
@@ -60,15 +60,15 @@ end
 #   @@genres = []
 #   @@artist_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
 #   @@genre_count = {} #{"rap" => 5, "rock" => 1, "country" => 3}
-# 
+#
 #   #attr_accessor work only for INSTANCE variables
 #   attr_accessor :artist, :name, :genre
 #   # attr_reader :count, :artist, :genres:, :artist_count, :genres_count
-# 
+#
 #   def initialize(name, artist, genre)
-# 
+#
 #     @@count += 1
-# 
+#
 #     @name = name
 #     @artist = artist
 #     @genre = genre
@@ -81,29 +81,29 @@ end
 #       @@genre_count[genre] = @@genres.select { |value| return value if value == genre end}.length
 #   #  end
 #     #initialize @@artist_count and @@genres_count below
-#      
-#      
+#
+#
 #       # select_array = []
 #       # select_array << value
-# 
+#
 #     @@genre_count[genre] = @@genres.length
 #   end
-# 
+#
 #   def self.count
 #     @@count
 #   end
-# 
+#
 #   def self.artists
 #     @@artists.uniq
 #   end
-# 
+#
 #   def self.genres
 #     @@genres.uniq
 #   end
 #   def self.genre_count
 #     @@genre_count
 #   end
-# 
+#
 #   # def self.genre_count
 #   #   #return all duplicate genre names from @@genre array
 #   #   #@@genres.select { |value| value == artist}
@@ -119,7 +119,7 @@ end
 #   #   @@genre.count(  )
 #   #   @@genre_count
 #   # end
-# 
+#
 #   def self.artist_count
 #     @@artist_count
 #   end
