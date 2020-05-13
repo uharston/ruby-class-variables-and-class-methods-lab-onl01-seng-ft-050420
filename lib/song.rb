@@ -8,7 +8,7 @@ class Song
 
   @@genres = []
 
-  @@artist_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
+  @@artists_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
 
   @@genre_count = {} #{"rap" => 5, "rock" => 1, "country" => 3}
 
@@ -21,25 +21,24 @@ class Song
     @@count += 1
 
     @name = name
-    @artist_name = artist
+    @artist = artist
     @genre = genre
 
-    unless @@artists.include?(artist)
+    # unless @@artists.include?(artist)
       @@artists << artist
-    end
-
-    unless @@genres.include?(genre)
+    # end
+    # unless @@genres.include?(genre)
       @@genres << genre
-    end
+  #  end
     #initialize @@artist_count and @@genres_count below
 
-    @@artist_count[artist] = @@artists.select { |value| value == artist}.length
+    @@artists_count[artist] = @@artists.select { |value| value == artist}.length
       # select_array = []
       # select_array << value
 
     @@genre_count[genre] = @@genres.length
 
-binding.pry
+
   end
 
   def self.count
@@ -47,27 +46,27 @@ binding.pry
   end
 
   def self.artists
-    @@artist
+    @@artists.uniq
   end
 
   def self.genres
-    @@genres
+    @@genres.uniq
   end
 
   def self.genre_count
     @@genre_count
   end
 
-  def self.artist_count
-    @@artist_count
+  def self.artists_count
+    @@artists_count
   end
 end
-# a1 = Song.new("Both", "Drake", "Rap")
-# a2 = Song.new("Glyachester", "Drake", "Rap")
-# a3 = Song.new("Started From The Bottom", "Drake", "Rap")
-# b = Song.new("Let It Happen","Tame Impala",  "Indie")
-# c = Song.new( "What's My Age Again?","Blink 182", "Punk")
-# d = Song.new( "Niggas In Paris","Jay-Z", "Rap")
+a1 = Song.new("Both", "Drake", "Rap")
+a2 = Song.new("Glyachester", "Drake", "Rap")
+a3 = Song.new("Started From The Bottom", "Drake", "Rap")
+b = Song.new("Let It Happen","Tame Impala",  "Indie")
+c = Song.new( "What's My Age Again?","Blink 182", "Punk")
+d = Song.new( "Niggas In Paris","Jay-Z", "Rap")
 #
 #   class Dog
 #   attr_accessor :name :breed
