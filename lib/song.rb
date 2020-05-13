@@ -30,8 +30,8 @@ class Song
       @@genres << genre
   #  end
     #initialize @@artist_count and @@genres_count below
-
-    # @@artist_count[artist] = @@artists.select { |value| value == artist}.length
+     @@genre_count[genre] = @@genres.select { |value| value == genre}.length
+     @@artist_count[artist] = @@artists.select { |value| value == artist}.length
       # select_array = []
       # select_array << value
 
