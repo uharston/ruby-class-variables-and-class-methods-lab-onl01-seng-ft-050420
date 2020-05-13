@@ -49,7 +49,9 @@ class Song
   def self.genres
     @@genres.uniq
   end
-
+  def self.genre_count
+  end
+  
   # def self.genre_count
   #   #return all duplicate genre names from @@genre array
   #   #@@genres.select { |value| value == artist}
