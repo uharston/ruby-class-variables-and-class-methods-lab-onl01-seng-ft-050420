@@ -6,6 +6,7 @@ class Song
   @@artist_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
   @@genre_count = {} #{"rap" => 5, "rock" => 1, "country" => 3}
   attr_accessor :artist, :name, :genre
+  
   def initialize(name, artist, genre)
     #instance variables start
     @name = name
@@ -45,8 +46,9 @@ class Song
   def self.artist_count
     @@artist_count
   end
-binding.pry
+
   def self.genre_count
+    binding.pry
     @@genre_count
   end
 
