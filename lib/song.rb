@@ -50,21 +50,21 @@ class Song
     @@genres.uniq
   end
 
-  def self.genre_count
-    #return all duplicate genre names from @@genre array
-    #@@genres.select { |value| value == artist}
-    #.count will count how many element fit the passed in argument
-    new =[]
-    ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].inject do |base, comparison|
-      if base == comparison
-      new << comparison
-      end
-    end
-    ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].count("Rap")
-    #How to find a good argument for .count? Iteration?
-    @@genre.count(  )
-    @@genre_count
-  end
+  # def self.genre_count
+  #   #return all duplicate genre names from @@genre array
+  #   #@@genres.select { |value| value == artist}
+  #   #.count will count how many element fit the passed in argument
+  #   new =[]
+  #   ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].inject do |base, comparison|
+  #     if base == comparison
+  #     new << comparison
+  #     end
+  #   end
+  #   ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"].count("Rap")
+  #   #How to find a good argument for .count? Iteration?
+  #   @@genre.count(  )
+  #   @@genre_count
+  # end
 
   def self.artist_count
     @@artist_count
