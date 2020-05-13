@@ -61,12 +61,12 @@ class Song
     @@artists_count
   end
 end
-a1 = Song.new("Both", "Drake", "Rap")
-a2 = Song.new("Glyachester", "Drake", "Rap")
-a3 = Song.new("Started From The Bottom", "Drake", "Rap")
-b = Song.new("Let It Happen","Tame Impala",  "Indie")
-c = Song.new( "What's My Age Again?","Blink 182", "Punk")
-d = Song.new( "Niggas In Paris","Jay-Z", "Rap")
+# a1 = Song.new("Both", "Drake", "Rap")
+# a2 = Song.new("Glyachester", "Drake", "Rap")
+# a3 = Song.new("Started From The Bottom", "Drake", "Rap")
+# b = Song.new("Let It Happen","Tame Impala",  "Indie")
+# c = Song.new( "What's My Age Again?","Blink 182", "Punk")
+# d = Song.new( "Niggas In Paris","Jay-Z", "Rap")
 #
 #   class Dog
 #   attr_accessor :name :breed
