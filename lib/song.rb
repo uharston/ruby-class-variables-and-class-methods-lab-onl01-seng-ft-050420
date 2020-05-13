@@ -15,7 +15,7 @@ class Song
   #attr_accessor work only for INSTANCE variables
   attr_accessor :artist_name, :name, :genre
   # attr_reader :count, :artist, :genres:, :artist_count, :genres_count
-binding.pry
+
   def initialize(name, artist, genre)
 
     @@count += 1
@@ -39,7 +39,7 @@ binding.pry
 
     @@genre_count[genre] = @@genres.length
 
-
+binding.pry
   end
 
   def self.count
