@@ -8,7 +8,7 @@ class Song
 
   @@genres = []
 
-  @@artists_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
+  @@artist_count = {} #{"Beyonce" => 17, "Jay-Z" => 40}
 
   @@genre_count = {} #{"rap" => 5, "rock" => 1, "country" => 3}
 
@@ -31,7 +31,7 @@ class Song
   #  end
     #initialize @@artist_count and @@genres_count below
 
-    @@artists_count[artist] = @@artists.select { |value| value == artist}.length
+    @@artist_count[artist] = @@artists.select { |value| value == artist}.length
       # select_array = []
       # select_array << value
 
@@ -66,8 +66,8 @@ class Song
     @@genre_count
   end
 
-  def self.artists_count
-    @@artists_count
+  def self.artist_count
+    @@artist_count
   end
 end
 ["Rap", "Rap", "Rap", "Indie", "Punk", "Rap"]
